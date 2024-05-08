@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SeriesController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -9,7 +10,8 @@ Route::get('/', function () {
 });
 
 Route::get('/trending', function () {
-    return view('trending');
+    $controller = new SeriesController();
+    return $controller->index();
 })->middleware(['auth', 'verified'])->name('trending');
 
 Route::middleware('auth')->group(function () {

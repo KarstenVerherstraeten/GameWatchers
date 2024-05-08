@@ -5,18 +5,19 @@
         </h2>
     </x-slot>
 
-    <head>
-        <link rel="stylesheet" href="{{ ('/to/welcome.css') }}">
-    </head>
+    @foreach($series as $seriesDetails)
 
-    <div class="contentBox">
-        <p class="title">movieTitle</p>
-        <p>Watch</p>
-        <button>Add to MyList</button>
-        <button>View Related games</button>
+        <div class="contentBox">
+            <p class="title">{{ $seriesDetails->title }}</p>
+            <p>{{ $seriesDetails->description }}</p>
+            <p>Watch</p>
+            <button>Add to MyList</button>
+            <button>View Related games</button>
 
-        <div class="gameList">
+            <div class="gameList">
 
+            </div>
         </div>
-    </div>
+    @endforeach
+
 </x-app-layout>
