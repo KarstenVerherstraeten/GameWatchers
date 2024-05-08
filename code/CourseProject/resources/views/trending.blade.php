@@ -6,7 +6,7 @@
     </x-slot>
 
     <head>
-        <link rel="stylesheet" href="{{ ('/to/trending.css') }}">
+        <link rel="stylesheet" href="{{ ('/to/welcome.css') }}">
     </head>
 
     <div class="contentBox">

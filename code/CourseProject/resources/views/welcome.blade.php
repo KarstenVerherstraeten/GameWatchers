@@ -8,9 +8,16 @@
     <title>GameWatchers</title>
 </head>
 <body>
-    <h1>Welcome to GameWatchers</h1>
-    <p>GameWatchers is a website that allows you to keep track of your favorite series or movies that are related to games</p>
+<h1 class="title">Welcome to GameWatchers</h1>
+<p>GameWatchers is a website that allows you to keep track of your favorite series or movies that are related to games</p>
+<div>
+    <p>log in to continue!</p>
+    <a href="{{ route('login') }}">Log In</a>
+</div>
+<div>
     <p>Sign up now to get started!</p>
     <a href="{{ route('register') }}">Sign Up</a>
+</div>
+
 </body>
 </html>
