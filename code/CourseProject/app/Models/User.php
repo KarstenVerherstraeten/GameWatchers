@@ -44,4 +44,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function series()
+    {
+        return $this->belongsToMany(Series::class, 'user_series')->withTimestamps();
+    }
+
 }

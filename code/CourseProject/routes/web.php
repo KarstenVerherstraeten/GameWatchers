@@ -21,9 +21,19 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
 Route::get('/myList', function () {
-    return view('myList');
+    $controller = new SeriesController();
+    return $controller->myList();
 })->middleware(['auth', 'verified'])->name('myList');
 
-require __DIR__.'/auth.php';
+Route::post('/mylist/{series}/add-to-my-list',
+    [SeriesController::class, 'addToMyList'
+])->middleware(['auth', 'verified'])->name('myList.addToMyList');
+
+Route::delete('/mylist/{series}/remove-from-my-list',
+    [SeriesController::class, 'removeFromMyList'
+])->middleware(['auth', 'verified'])->name('myList.removeFromMyList');
+
+
+
+require __DIR__ . '/auth.php';
