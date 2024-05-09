@@ -10,6 +10,12 @@
 <body>
 <h1 class="title">Welcome to GameWatchers</h1>
 <p>GameWatchers is a website that allows you to keep track of your favorite series or movies that are related to games</p>
+
+@if(auth()->check())
+    <!-- keeps users from leaving the auth space-->
+    <script>window.location.href = "{{ route('trending') }}";</script>
+@endif
+
 <div>
     <p>log in to continue!</p>
     <a href="{{ route('login') }}">Log In</a>
