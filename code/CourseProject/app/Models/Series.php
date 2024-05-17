@@ -14,6 +14,8 @@ class Series extends Model
     protected $fillable = [
         'title',
         'description',
+        'image',
+        'video'
     ];
 
     public function users()

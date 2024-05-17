@@ -6,30 +6,15 @@
     </x-slot>
 
 
+
     @foreach($series as $seriesDetails)
-
-        <div class="contentBox">
-            <p class="title">{{ $seriesDetails->title }}</p>
-            <p>{{ $seriesDetails->description }}</p>
-            <p>Watch</p>
-            <form action="{{ route('myList.addToMyList', $seriesDetails) }}" method="post">
-                @csrf
-
-                @if(!$seriesDetails->users->contains(auth()->user()))
-                    <button type="submit">Add to MyList</button>
-                @else
-                    <button type="button" disabled>Already in <a href="{{ route('myList') }}">MyList</a></button>
-                @endif
-            </form>
-
-
-
-            <button>View Related games</button>
-
-            <div class="gameList">
-
-            </div>
-        </div>
+        <x-series-box
+            :image="$seriesDetails->image"
+            :title="$seriesDetails->title"
+            :description="$seriesDetails->description"
+            :seriesId="$seriesDetails->id"
+            :inMyList="$seriesDetails->users->contains(auth()->user())"
+            :streamUrl="$seriesDetails->video"
+        />
     @endforeach
-
 </x-app-layout>
