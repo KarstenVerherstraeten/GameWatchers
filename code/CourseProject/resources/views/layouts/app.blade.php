@@ -21,9 +21,18 @@
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-7xl  py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
+
+                    <!-- Search Bar -->
+                    <div class=" sm:block sm:ml-6 search">
+                        <form action="{{ route('search') }}" method="GET">
+                            <input type="text" name="query" placeholder="Search..." class="px-3 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500">
+                            <button type="submit" class="px-3 py-2 bg-blue-500 text-white rounded-md ml-2">Search</button>
+                        </form>
+                    </div>
+
                 </header>
             @endif
 

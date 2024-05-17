@@ -26,6 +26,11 @@ Route::get('/myList', function () {
     return $controller->myList();
 })->middleware(['auth', 'verified'])->name('myList');
 
+Route::get('/search', function (){
+    $controller = new \App\Http\Controllers\SearchController();
+    return $controller->search(request());
+})->middleware(['auth', 'verified'])->name('search');
+
 Route::post('/mylist/{series}/add-to-my-list',
     [SeriesController::class, 'addToMyList'
 ])->middleware(['auth', 'verified'])->name('myList.addToMyList');
