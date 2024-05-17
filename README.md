@@ -12,3 +12,8 @@ GameWatchers provides a platform for users to discover, bookmark, and explore se
 - Personalized MyList: Create a personalized list of series and movies to watch later.
 - User Authentication: Secure user authentication system with login and registration functionalities.
 - (semi)Responsive Design: Optimized for use on desktop, tablet, and mobile devices.
+
+
+##todo
+
+- Make profile picture work
