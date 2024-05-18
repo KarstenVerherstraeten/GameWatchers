@@ -12,6 +12,20 @@ class SeriesController extends Controller
         return view('trending', ['series' => $series]);
     }
 
+    public function showSerie(){
+
+
+        $movies = Series::where('is_movie', true)->get();
+        // Pass the movies to the view
+        return view('movies', ['movies' => $movies]);
+    }
+
+    public function showSeries(){
+        $series = Series::where('is_movie', false)->get();
+        // Pass the series to the view
+        return view('series', ['series' => $series]);
+    }
+
     public function myList()
     {
         // Retrieve the authenticated user
@@ -23,6 +37,7 @@ class SeriesController extends Controller
         // Return the My List view with the user's MyList of series
         return view('myList', ['myList' => $myList]);
     }
+
 
     public function addToMyList(Series $series)
     {

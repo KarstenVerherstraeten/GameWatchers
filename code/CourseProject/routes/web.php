@@ -14,6 +14,16 @@ Route::get('/trending', function () {
     return $controller->index();
 })->middleware(['auth', 'verified'])->name('trending');
 
+Route::get('/movies', function () {
+    $controller = new SeriesController();
+    return $controller->showSerie();
+})->middleware(['auth', 'verified'])->name('movies');
+
+Route::get('/series', function () {
+    $controller = new SeriesController();
+    return $controller->showSeries();
+})->middleware(['auth', 'verified'])->name('series');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

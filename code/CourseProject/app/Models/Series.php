@@ -14,6 +14,8 @@ class Series extends Model
     protected $fillable = [
         'title',
         'description',
+        'reladedGames',
+        'is_movie',
         'image',
         'video'
     ];

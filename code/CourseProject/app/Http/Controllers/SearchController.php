@@ -14,6 +14,6 @@ class SearchController extends Controller
         // Perform search logic using the query
         $results = series::where('title', 'like', '%' . $query . '%')->get();
 
-        return view('results', ['results' => $results]);
+        return view('searchResults', ['results' => $results]);
     }
 }

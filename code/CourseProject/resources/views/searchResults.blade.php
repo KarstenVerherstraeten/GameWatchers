@@ -13,6 +13,7 @@
             :seriesId="$result->id"
             :inMyList="$result->users->contains(auth()->user())"
             :streamUrl="$result->video"
+            :relatedGames="$result->relatedGames"
         />
     @endforeach
 </x-app-layout>

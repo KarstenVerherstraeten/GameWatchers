@@ -13,7 +13,7 @@
             @endif
         </form>
         <button onclick="startStreaming('{{ $streamUrl }}')">Watch</button>
-        <button>View Related games</button>
+        <button onclick="viewRelatedGames('{{ $relatedGames }}')">View Related games</button>
     </div>
 
     <div class="gameList"></div>
@@ -36,5 +36,9 @@
     function closeStreaming() {
         document.getElementById('streamingIframe').src = '';
         document.getElementById('streamingContainer').classList.add('hidden');
+    }
+
+    function viewRelatedGames(url) {
+        window.open(url, '_blank');
     }
 </script>

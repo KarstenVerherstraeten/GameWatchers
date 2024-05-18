@@ -16,8 +16,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('description');
+            $table->string('relatedGames')->nullable();
             $table->string('image')->nullable();
             $table->string('video')->nullable();
+            $table->boolean('is_movie')->default(false);
         });
     }
 

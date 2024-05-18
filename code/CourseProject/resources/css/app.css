@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.contentBox {
+    width: 500px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #2d3748;
+    color: white;
+}
+.contentBox .banner {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBox .title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.contentBox button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contentBox button:hover {
+    background-color: #2d3748;
+}
+#streamingContainer {
+    margin-top: 20px;
+}
+#streamingContainer button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#streamingContainer button:hover {
+    background-color: #2d3748;
+}
