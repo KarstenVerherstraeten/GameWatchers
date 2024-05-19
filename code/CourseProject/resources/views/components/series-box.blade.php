@@ -9,7 +9,7 @@
             @if(!$inMyList)
                 <button type="submit">Add to MyList</button>
             @else
-                <button type="button" disabled>Already in <a href="{{ route('myList') }}">MyList</a></button>
+                <button type="button" disabled><a href="{{ route('myList') }}">Already in MyList</a></button>
             @endif
         </form>
         <button onclick="startStreaming('{{ $streamUrl }}')">Watch</button>
