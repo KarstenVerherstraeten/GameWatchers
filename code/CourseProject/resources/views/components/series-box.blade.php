@@ -13,14 +13,12 @@
             @endif
         </form>
         <button onclick="startStreaming('{{ $streamUrl }}')">Watch</button>
-        <button onclick="viewRelatedGames('{{ $relatedGames }}')">View Related games</button>
+        <button onclick="viewRelatedGames('{{ route('series.games', $seriesId) }}')">View Related Games</button>
     </div>
 
     <div class="gameList"></div>
 </div>
 
-
-<!-- helped by ChatGPT for the Iframe-->
 <!-- Iframe for streaming -->
 <div id="streamingContainer" class="hidden">
     <iframe id="streamingIframe" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
@@ -39,6 +37,6 @@
     }
 
     function viewRelatedGames(url) {
-        window.open(url, '_blank');
+        window.location.href = url;
     }
 </script>

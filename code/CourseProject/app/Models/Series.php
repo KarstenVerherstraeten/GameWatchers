@@ -25,4 +25,9 @@ class Series extends Model
         return $this->belongsToMany(User::class, 'user_series')->withTimestamps();
     }
 
+    public function games()
+    {
+        return $this->belongsToMany(Game::class, 'series_game');
+    }
+
 }

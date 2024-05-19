@@ -31,6 +31,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
+route::get('/series/{id}/games', function ($id) {
+    $controller = new \App\Http\Controllers\GameController();
+    return $controller->showRelatedGames($id);
+})->middleware(['auth', 'verified'])->name('series.games');
+
 Route::get('/myList', function () {
     $controller = new SeriesController();
     return $controller->myList();

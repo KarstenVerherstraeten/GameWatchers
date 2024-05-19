@@ -57,3 +57,27 @@
 #streamingContainer button:hover {
     background-color: #2d3748;
 }
+
+
+#games-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-box {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.game-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.game-box h3 {
+    margin: 10px 0;
+}
