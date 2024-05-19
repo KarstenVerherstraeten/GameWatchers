@@ -13,8 +13,6 @@ class SeriesController extends Controller
     }
 
     public function showSerie(){
-
-
         $movies = Series::where('is_movie', true)->get();
         // Pass the movies to the view
         return view('movies', ['movies' => $movies]);
