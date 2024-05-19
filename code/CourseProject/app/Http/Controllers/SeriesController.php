@@ -18,6 +18,14 @@ class SeriesController extends Controller
         return view('movies', ['movies' => $movies]);
     }
 
+    public function watch($seriesId)
+    {
+        $series = Series::findOrFail($seriesId);
+        return view('watch', ['series' => $series]);
+    }
+
+
+
     public function showSeries(){
         $series = Series::where('is_movie', false)->get();
         // Pass the series to the view

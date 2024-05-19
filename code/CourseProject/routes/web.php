@@ -24,6 +24,11 @@ Route::get('/series', function () {
     return $controller->showSeries();
 })->middleware(['auth', 'verified'])->name('series');
 
+Route::get('/watch/{series}', function ($series) {
+    $controller = new SeriesController();
+    return $controller->watch($series);
+})->middleware(['auth', 'verified'])->name('watch');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

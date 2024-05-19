@@ -19,23 +19,8 @@
     <div class="gameList"></div>
 </div>
 
-<!-- Iframe for streaming -->
-<div id="streamingContainer" class="hidden">
-    <iframe id="streamingIframe" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
-    <button onclick="closeStreaming()">Close</button>
-</div>
 
 <script>
-    function startStreaming(url) {
-        document.getElementById('streamingIframe').src = url;
-        document.getElementById('streamingContainer').classList.remove('hidden');
-    }
-
-    function closeStreaming() {
-        document.getElementById('streamingIframe').src = '';
-        document.getElementById('streamingContainer').classList.add('hidden');
-    }
-
     function viewRelatedGames(url) {
         window.location.href = url;
     }
